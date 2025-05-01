@@ -5,9 +5,12 @@ from scipy.cluster.hierarchy import dendrogram, linkage
 np.random.seed(0)
 data = np.random.rand(10, 2) # 10 random data points with 2 features
 # Perform hierarchical clustering
+
 linked = linkage(data, method='average') # You can change 'average' to 'single' or 'complete'
+#linkage = calculate distance between clusters
+
 # Create a dendrogram
-plt.figure(figsize=(10, 7))
+plt.figure(figsize=(12, 6))
 dendrogram(linked)
 plt.title('Hierarchical Clustering Dendrogram')
 plt.xlabel('Data points')
